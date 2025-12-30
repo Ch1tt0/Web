@@ -1,0 +1,34 @@
+:root {
+  font-family: "Tinos", serif;
+  font-size: 1.4em;
+  background: #3C3C3C;
+  color: #F3F3F3;
+}
+
+a:link { color: #D2665A; }
+a:visited { color: #F7374F; }
+a:hover { color: #F29AAE; }
+a:active { color: #428BBA; }
+
+h1 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+#blog-container {
+  overflow-y: scroll;
+  max-height: 400px;
+  max-width: 50%;
+
+  margin: 0 auto;
+  border: solid white;
+
+  text-align: center;
+}
