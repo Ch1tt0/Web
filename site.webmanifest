@@ -1,0 +1,14 @@
+{
+    "short_name": "Ch1tt0",
+    "name": "Ch1tt0s Website",
+    "icons": [
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        }
+    ],
+    "start_url": "https://ch1tt0.me/",
+    "background_color": "#fafafa",
+    "theme_color": "#fafafa"
+}
