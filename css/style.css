@@ -1,22 +1,65 @@
 html {
-    color: #222;
+    color: #222222;
+
+    font-family: serif, sans-serif;
     font-size: 1em;
+
     line-height: 1.4;
 }
 
 body {
     justify-content: center;
+    flex-direction: column;
 }
 
-/*
- * A better looking default horizontal rule.
-*/
+main {
+    display: block;
+    width: 75%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
 hr {
     display: block;
     height: 1px;
     width: 95%;
     border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em auto;
     padding: 0;
+}
+
+footer {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    display: block;
+}
+
+p {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    margin: 0.5em 0 0.5em 0;
+}
+
+img {
+    display: inline;
+}
+
+a {
+    display: inline;
+}
+
+span {
+    display: inline;
 }
