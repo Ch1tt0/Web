@@ -1,0 +1,1 @@
+- Figure out how to add an icon to Discord site embed!
