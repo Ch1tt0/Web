@@ -45,6 +45,7 @@ script {
     display: flex;
     border-width: 0;
     border-style: solid;
+    font: inherit;
 }
 
 /* 

@@ -1,0 +1,5 @@
+@font-face {
+    font-family: DepartureMonoNerdFontPropo;
+    src: url(/font/DepartureMonoNerdFontPropo-Regular.woff2), url(/font/DepartureMonoNerdFontPropo-Regular.woff), url(/font/DepartureMonoNerdFontPropo-Regular.otf);
+    font-weight: 400;
+}
