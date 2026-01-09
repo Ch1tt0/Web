@@ -1,10 +1,30 @@
+:root {
+    --base-font-size: 16px;
+    --base-line-height: var(--base-font-size) * 1.4;
+
+    --h1-multiplier: 2.25;
+    --h2-multiplier: 2;
+    --h3-multiplier: 1.75;
+    --h4-multiplier: 1.5;
+    --h5-multiplier: 1.25;
+    --h6-multiplier: 1;
+
+    --base-color: #9a9da8;
+    --base-background-color: #323232;
+    --unimportant-text-color: #696969;
+
+    --base-border-color: #696969;
+    --base-border-thickness: 2px;
+}
+
 html {
-    color: #222222;
+    color: var(--base-color);
+    background-color: var(--base-background-color);
 
     font-family: DepartureMonoNerdFontPropo, serif, sans-serif;
-    font-size: 1em;
+    font-size: var(--base-font-size);
 
-    line-height: 1.4;
+    line-height: var(--base-line-height);
 }
 
 body {
@@ -21,11 +41,11 @@ main {
 
 hr {
     display: block;
-    height: 1px;
+    height: var(--base-border-thickness);
     width: 95%;
     border: 0;
-    border-top: 1px solid #cccccc;
-    margin: 1em auto;
+    border-top: var(--base-border-thickness) solid var(--base-color);
+    margin: 0.5em auto;
     padding: 0;
 }
 
@@ -45,11 +65,47 @@ h6 {
     display: block;
 }
 
+:is(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6)::before {
+    display: inline;
+    content: "°";
+    position: relative;
+    top: calc(var(--base-font-size) / 2);
+}
+
+h1 {
+    font-size: calc(var(--base-font-size) * var(--h1-multiplier));
+}
+
+h2 {
+    font-size: calc(var(--base-font-size) * var(--h2-multiplier));
+}
+
+h3 {
+    font-size: calc(var(--base-font-size) * var(--h3-multiplier));
+}
+
+h4 {
+    font-size: calc(var(--base-font-size) * var(--h4-multiplier));
+}
+
+h5 {
+    font-size: calc(var(--base-font-size) * var(--h5-multiplier));
+}
+
+h6 {
+    font-size: calc(var(--base-font-size) * var(--h6-multiplier));
+}
+
 p {
     display: block;
     width: fit-content;
     height: fit-content;
-    margin: 0.5em 0 0.5em 0;
+    margin: 0.5em 0 0.5em 1em;
 }
 
 img {
