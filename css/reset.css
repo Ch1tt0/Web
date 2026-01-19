@@ -1,71 +1,48 @@
-/* 
-   Resets any previous style, e.g. from user or user agent style sheet
-   beware: also resets styling properties of SVG elements defined as presentational attributes,
-   because they behave as if they were defined at the top of the author style sheet
-   with specificity 0, and therefore the `all` shorthand overrules them.
-   Need to style SVG elements instead in CSS, e.g. using inline styles.
-*/
-
+/* Resets Everything */
 *,
 *::before,
 *::after {
-    all: unset;
+  all: unset;
 }
 
-/* Hide Head */
-
+/* Hide Elements That Are Supposed To Be Hidden */
 head,
 meta,
 title,
 link,
 style,
 script {
-    display: none;
+  display: none;
 }
 
-/* Enable focus outline for accessibility. */
-
+/* Enable Focus Outline For Accessibility. */
 :focus-visible {
-    outline-color: var(--focus-outline-color, rgb(0, 119, 204));
-    outline-width: var(--focus-outline-width, 1px);
-    outline-style: auto;
-    outline-offset: var(--focus-outline-offset, 0);
+  outline-color: var(--focus-outline-color, rgb(0, 119, 204));
+  outline-width: var(--focus-outline-width, 1px);
+  outline-style: auto;
+  outline-offset: var(--focus-outline-offset, 0);
 }
 
-/* Include border in box size. */
-
-/* Make Flex Layout default layout. */
-
-/* Invert border defaults. */
-
+/* Set Some Sensible Defaults */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    display: flex;
-    border-width: 0;
-    border-style: solid;
-    font: inherit;
+  box-sizing: border-box;
+  display: flex;
+  border-width: 0;
+  border-style: solid;
+  font: inherit;
 }
 
 /* 
-Make root element size of viewport.
-
-Note: inline-size: 100% is already default in Flex Layout!
+    Make Root Element Size Of Viewport
+    Note: inline-size: 100% is already default in Flex Layout!
 */
-
 html {
-    block-size: 100%;
+  block-size: 100%;
 }
 
-/* 
-Make entry point element full size.
-
-Note: Cross axis stretch by default in Flex Layout, where cross axis is block direction by default in Flex Layout.
-
-Disable cross axis stretch on any child element, e.g. align-self: start;
-*/
-
+/* Make Entry Point Element Full Size */
 body {
-    flex: 1;
+  flex: 1;
 }
