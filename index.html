@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en_US">
   <head>
     <!-- Info -->
@@ -16,7 +16,7 @@
     <meta property="og:title" content="Ch1tt0s Web" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ch1tt0.me/" />
-    <meta property="og:image" content=/icon.png">
+    <meta property="og:image" content="/icon.png" />
     <meta property="og:image:alt" content="Chitos Head" />
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -28,15 +28,33 @@
 
   <body>
     <main>
-      <div template="pages-navbar"></div>
-      <div template="main-section"></div>
-      <div template="footer"></div>
+      <nav class="horizontal-navbar">
+        <ol class="horizontal-navbar">
+          <li class="horizontal-navbar">
+            <a href="/index.html" class="horizontal-navbar">Home</a>
+          </li>
+          <li class="horizontal-navbar">
+            <a href="/blog.html" class="horizontal-navbar">Blog</a>
+          </li>
+          <li class="horizontal-navbar">
+            <a href="/projects.html" class="horizontal-navbar">Projects</a>
+          </li>
+        </ol>
+      </nav>
+      <section id="main">
+        <aside>
+          <img src="/img/profile.png" />
+          <hr />
+        </aside>
+        <section></section>
+      </section>
+      <footer>
+        <p>CC-BY-4.0 Ch1tt0 2026</p>
+      </footer>
     </main>
 
     <!-- JavaScript -->
     <script src="/js/oneko.js"></script>
-    <!-- Custom Elements -->
-    <script src="/templates/loader.js"></script>
     <noscript>Enable JavaScript!</noscript>
   </body>
 </html>

@@ -1,0 +1,34 @@
+nav.horizontal-navbar {
+  width: 90%;
+  margin: 0 auto;
+
+  border: var(--border-thickness) dashed var(--border-color);
+  border-radius: var(--border-radius);
+
+  background-color: var(--theme-surface-0);
+}
+ol.horizontal-navbar {
+  width: 100%;
+  justify-content: space-around;
+}
+li.horizontal-navbar {
+  padding: var(--padding);
+}
+
+#main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#main > aside {
+  width: 30%;
+  flex-direction: column;
+}
+
+#main > aside > img {
+  width: 30vw;
+}
+
+#main > section {
+  width: 70%;
+}

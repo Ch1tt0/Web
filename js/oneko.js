@@ -94,7 +94,7 @@
         persistPosition = true;
       } else {
         persistPosition = JSON.parse(
-          curScript.dataset.persistPosition.toLowerCase()
+          curScript.dataset.persistPosition.toLowerCase(),
         );
       }
     }
@@ -148,7 +148,7 @@
             idleAnimation: idleAnimation,
             idleAnimationFrame: idleAnimationFrame,
             bgPos: nekoEl.style.backgroundPosition,
-          })
+          }),
         );
       });
     }
