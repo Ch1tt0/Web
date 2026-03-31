@@ -1,6 +1,6 @@
 nav.horizontal-navbar {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto var(--spacing);
 
   border: var(--border-thickness) dashed var(--border-color);
   border-radius: var(--border-radius);
@@ -16,8 +16,15 @@ li.horizontal-navbar {
 }
 
 #main {
-  width: 90%;
-  margin: 0 auto;
+  width: 85%;
+  margin: 0 auto var(--spacing);
+
+  padding: var(--padding);
+
+  border: var(--border-thickness) dashed var(--border-color);
+  border-radius: var(--border-radius);
+
+  background-color: var(--theme-surface-1);
 }
 
 #main > aside {
@@ -25,10 +32,27 @@ li.horizontal-navbar {
   flex-direction: column;
 }
 
+/* Profile Picture */
 #main > aside > img {
-  width: 30vw;
+  margin: 0 auto var(--spacing);
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* Username */
+#main > aside > span {
+  margin: 0 auto;
+  font-size: calc(var(--font-size) * var(--h3-multiplier));
 }
 
 #main > section {
   width: 70%;
+}
+
+footer {
+  padding: var(--padding);
+  border: var(--border-thickness) dashed var(--border-color);
+  border-radius: var(--border-radius);
+
+  background-color: var(--theme-surface-0);
 }

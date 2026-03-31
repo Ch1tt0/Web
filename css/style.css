@@ -55,6 +55,7 @@
   --border-radius: calc(var(--font-size) * 0.4);
 
   --padding: 5px;
+  --spacing: 6px;
 
   --link-color: var(--theme-blue);
   --hovered-link-color: var(--theme-sapphire);
