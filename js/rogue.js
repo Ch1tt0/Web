@@ -4,7 +4,7 @@ const displayContainer = document.body;
 const scene = new THREE.Scene();
 
 let displayWidth = displayContainer.clientWidth;
-let displayHeight = displayContainer.clientHeight;
+let displayHeight = displayContainer.offsetHeight;
 let deltaTime = 0;
 let prevTime = 0;
 let fps = 0;
