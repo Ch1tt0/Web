@@ -1,0 +1,21 @@
+#displayContainer {
+  width: 90%;
+  height: 90%;
+
+  margin: auto;
+}
+
+/* Info Panel */
+#infoPanel {
+  position: absolute;
+  top: 1vh;
+  left: 1vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* FPS Counter */
+#fpsCounterContainer {
+  color: var(--theme-text);
+}

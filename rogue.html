@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en_US">
+  <head>
+    <!-- Info -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rogue</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/rogue.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- More Info -->
+    <meta name="description" content="Simple roguelike!" />
+
+    <meta property="og:title" content="Rogue" />
+    <meta property="og:type" content="game" />
+    <meta property="og:url" content="https://ch1tt0.me/rogue.html" />
+    <meta property="og:image" content="/icon.png" />
+    <meta property="og:image:alt" content="Chitos Head" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <div id="infoPanel">
+      <div id="fpsCounterContainer">FPS: <span id="fpsCounter"></span></div>
+      <div id="positionDisplayContainer">
+        <span id="positionDisplayX"></span> Y:
+        <span id="positionDisplayY"></span> Z:
+        <span id="positionDisplayZ"></span>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script type="module" src="/js/rogue.js"></script>
+    <noscript>Enable JavaScript!</noscript>
+  </body>
+</html>
