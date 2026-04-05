@@ -1,10 +1,12 @@
 import * as THREE from "three";
 
+import { createScene } from "components/createScene.js";
+
 const displayContainer = document.body;
-const scene = new THREE.Scene();
+const scene = createScene();
 
 let displayWidth = displayContainer.clientWidth;
-let displayHeight = displayContainer.offsetHeight;
+let displayHeight = displayContainer.clientHeight;
 let deltaTime = 0;
 let prevTime = 0;
 let fps = 0;
@@ -13,20 +15,28 @@ let aspectRatio = displayWidth / displayHeight; // Aspect ratio
 let fieldOfView = 75; // Field of view
 
 const camera = new THREE.PerspectiveCamera(fieldOfView, aspectRatio, 0.1, 1000);
+camera.name = "Main Camera";
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(displayWidth, displayHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+renderer.shadowMap.enabled = true;
+renderer.toneMapping = THREE.NeutralToneMapping;
+renderer.shadowMap.type = THREE.PCFShadowMap;
 displayContainer.appendChild(renderer.domElement);
 
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
+cube.castShadow = true;
+cube.receiveShadow = true;
+cube.name = "Rotating Cube Mesh";
 scene.add(cube);
 
 camera.position.z = 5;
 
 const player = new THREE.Group();
-player.name = "Player";
+player.name = "Player Group";
 scene.add(player);
 
 // Update aspect ratio and canvas size on resize.
@@ -85,6 +95,6 @@ function animate(time) {
   renderer.render(scene, camera);
   prevTime = time; // Update previous time variable after all is done.
   prevFps = fps; // Update previous fps variable after all is done.
-  console.log(fps);
+  //   console.log(fps);
 }
 renderer.setAnimationLoop(animate);

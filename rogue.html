@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/rogue.css" />
 
+    <!-- Import map -->
     <script type="importmap">
       {
         "imports": {
           "three": "https://cdn.jsdelivr.net/npm/three@0.183.2/build/three.module.js",
-          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/"
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.183.2/examples/jsm/",
+          "components/": "./js/rogue/components/"
         }
       }
     </script>
@@ -45,7 +47,7 @@
       </div>
     </div>
     <!-- JavaScript -->
-    <script type="module" src="/js/rogue.js"></script>
+    <script type="module" src="/js/rogue/main.js"></script>
     <noscript>Enable JavaScript!</noscript>
   </body>
 </html>
