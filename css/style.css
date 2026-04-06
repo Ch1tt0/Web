@@ -6,12 +6,21 @@
 @font-face {
   font-family: DepartureMonoNerdFontPropo;
   src:
-    url(/font/DepartureMonoNerdFontPropo-Regular.woff2),
-    url(/font/DepartureMonoNerdFontPropo-Regular.woff),
-    url(/font/DepartureMonoNerdFontPropo-Regular.otf);
+    url(/font/DepartureMonoNerdFontPropo/DepartureMonoNerdFontPropo-Regular.woff2),
+    url(/font/DepartureMonoNerdFontPropo/DepartureMonoNerdFontPropo-Regular.woff),
+    url(/font/DepartureMonoNerdFontPropo/DepartureMonoNerdFontPropo-Regular.otf);
   font-weight: 400;
 }
-
+@font-face {
+  font-family: PixelifySans-Bold;
+  src: url(/font/PixelifySans/PixelifySans-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: PixelifySans-Regular;
+  src: url(/font/PixelifySans/PixelifySans-Regular.ttf);
+  font-weight: normal;
+}
 /* Global Variables */
 :root {
   /* Theme */
@@ -45,7 +54,7 @@
   /* Browser Facing */
   --font-size: 16px;
   --line-height: calc(var(--font-size) * 1.4);
-  --font-family: DepartureMonoNerdFontPropo;
+  --font-family: PixelifySans-Regular;
 
   --color: var(--theme-text);
   --background-color: var(--theme-base);
@@ -195,4 +204,52 @@ a:visited {
 a:hover:visited {
   color: var(--hovered-link-color);
   cursor: pointer;
+}
+
+/* Scrollbar Styling */
+/* Modern browsers — Chrome 121+, Edge 121+, Firefox, Safari 18.2+ */
+* {
+  scrollbar-width: 10px;
+  scrollbar-color: #f5a97f #5b6078;
+}
+
+/* Legacy WebKit — older Chrome/Edge/Safari, radius, borders & shadows */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #5b6078;
+  border-radius: 8px;
+  padding: 1px;
+  border: 3px solid #24273a;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #5b6078;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #5b6078;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #f5a97f;
+  border-radius: 8px;
+  min-height: 30px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ee99a0;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #ed8796;
+}
+
+*::-webkit-scrollbar-button {
+  display: none;
+  width: 0;
+  height: 0;
 }
