@@ -5,11 +5,6 @@
   margin: auto;
 
   flex-direction: column;
-
-  overflow-y: scroll;
-}
-h3::before {
-  display: none;
 }
 #moneyDisplay {
   text-align: center;
